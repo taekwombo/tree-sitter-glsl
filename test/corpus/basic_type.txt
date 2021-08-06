@@ -1,0 +1,956 @@
+================================================================================
+Basic Type
+================================================================================
+
+void;
+bool;
+int;
+uint;
+float;
+double;
+vec2;
+vec3;
+vec4;
+dvec2;
+dvec3;
+dvec4;
+bvec2;
+bvec3;
+bvec4;
+ivec2;
+ivec3;
+ivec4;
+uvec2;
+uvec3;
+uvec4;
+mat2;
+mat2x2;
+mat2x3;
+mat2x4;
+mat3;
+mat3x2;
+mat3x3;
+mat3x4;
+mat4;
+mat4x2;
+mat4x3;
+mat4x4;
+dmat2;
+dmat2x2;
+dmat2x3;
+dmat2x4;
+dmat3;
+dmat3x2;
+dmat3x3;
+dmat3x4;
+dmat4;
+dmat4x2;
+dmat4x3;
+dmat4x4;
+sampler1DShadow;
+sampler1DArrayShadow;
+sampler2DShadow;
+sampler2DArrayShadow;
+sampler2DRectShadow;
+samplerCubeShadow;
+samplerCubeArrayShadow;
+subpassInput;
+subpassInputMS;
+isubpassInput;
+isubpassInputMS;
+atomic_uint;
+usubpassInput;
+usubpassInputMS;
+sampler1D;
+sampler1DArray;
+sampler2D;
+sampler2DArray;
+sampler2DMS;
+sampler2DMSArray;
+sampler2DRect;
+sampler3D;
+samplerCube;
+samplerCubeArray;
+samplerBuffer;
+isampler1D;
+isampler1DArray;
+isampler2D;
+isampler2DArray;
+isampler2DMS;
+isampler2DMSArray;
+isampler2DRect;
+isampler3D;
+isamplerCube;
+isamplerCubeArray;
+isamplerBuffer;
+usampler1D;
+usampler1DArray;
+usampler2D;
+usampler2DArray;
+usampler2DMS;
+usampler2DMSArray;
+usampler2DRect;
+usampler3D;
+usamplerCube;
+usamplerCubeArray;
+usamplerBuffer;
+texture1D;
+texture1DArray;
+texture2D;
+texture2DArray;
+texture2DMS;
+texture2DMSArray;
+texture2DRect;
+texture3D;
+textureCube;
+textureCubeArray;
+textureBuffer;
+itexture1D;
+itexture1DArray;
+itexture2D;
+itexture2DArray;
+itexture2DMS;
+itexture2DMSArray;
+itexture2DRect;
+itexture3D;
+itextureCube;
+itextureCubeArray;
+itextureBuffer;
+utexture1D;
+utexture1DArray;
+utexture2D;
+utexture2DArray;
+utexture2DMS;
+utexture2DMSArray;
+utexture2DRect;
+utexture3D;
+utextureCube;
+utextureCubeArray;
+utextureBuffer;
+image1D;
+image1DArray;
+image2D;
+image2DArray;
+image2DMS;
+image2DMSArray;
+image2DRect;
+image3D;
+imageCube;
+imageCubeArray;
+imageBuffer;
+iimage1D;
+iimage1DArray;
+iimage2D;
+iimage2DArray;
+iimage2DMS;
+iimage2DMSArray;
+iimage2DRect;
+iimage3D;
+iimageCube;
+iimageCubeArray;
+iimageBuffer;
+uimage1D;
+uimage1DArray;
+uimage2D;
+uimage2DArray;
+uimage2DMS;
+uimage2DMSArray;
+uimage2DRect;
+uimage3D;
+uimageCube;
+uimageCubeArray;
+uimageBuffer;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type))))))

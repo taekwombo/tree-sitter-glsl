@@ -1,0 +1,95 @@
+================================================================================
+Numeric Constant - integer
+================================================================================
+
+void fn () {
+    1;
+    1u;
+    1U;
+    01;
+    02u;
+    02U;
+    0x1;
+    0x1u;
+    0x1U;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (integer_constant
+          (decimal_constant)))
+      (expression_statement
+        (integer_constant
+          (decimal_constant)))
+      (expression_statement
+        (integer_constant
+          (decimal_constant)))
+      (expression_statement
+        (integer_constant
+          (octal_constant)))
+      (expression_statement
+        (integer_constant
+          (octal_constant)))
+      (expression_statement
+        (integer_constant
+          (octal_constant)))
+      (expression_statement
+        (integer_constant
+          (hexadecimal_constant)))
+      (expression_statement
+        (integer_constant
+          (hexadecimal_constant)))
+      (expression_statement
+        (integer_constant
+          (hexadecimal_constant))))))
+
+================================================================================
+Numeric Constant - float
+================================================================================
+
+void fn () {
+    0.0;
+    .0;
+    0.;
+    0e1;
+    .7e+1;
+    0.9e-1;
+    0.82e-1LF;
+    0.0lf;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (float_constant)))))

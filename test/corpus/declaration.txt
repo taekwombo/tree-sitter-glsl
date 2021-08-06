@@ -1,0 +1,262 @@
+================================================================================
+Declaration: function_prototype
+================================================================================
+
+void fn_name ();
+void fn ( void );
+uint test (bool p1, float x);
+int[2] vec2 ();
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier)))
+  (declaration
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier)
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type)))))
+  (declaration
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier)
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))
+        name: (identifier))
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))
+        name: (identifier))))
+  (declaration
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)
+          (array_specifier
+            (integer_constant
+              (decimal_constant)))))
+      name: (identifier))))
+
+================================================================================
+Declaration: init_declarator_list
+================================================================================
+
+float one, two, three[3];
+const uint one, two, three = 1;
+const float one[2] = { 1.0, .0 }, two = 2.0;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      variable: (init_declarator
+        name: (identifier))
+      variable: (init_declarator
+        name: (identifier))
+      variable: (init_declarator
+        name: (identifier)
+        (array_specifier
+          (integer_constant
+            (decimal_constant))))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_qualifier
+          (storage_qualifier))
+        (type_specifier
+          (basic_type)))
+      variable: (init_declarator
+        name: (identifier))
+      variable: (init_declarator
+        name: (identifier))
+      variable: (init_declarator
+        name: (identifier)
+        value: (initializer
+          (integer_constant
+            (decimal_constant))))))
+  (declaration
+    (init_declarator_list
+      type: (fully_specified_type
+        (type_qualifier
+          (storage_qualifier))
+        (type_specifier
+          (basic_type)))
+      variable: (init_declarator
+        name: (identifier)
+        (array_specifier
+          (integer_constant
+            (decimal_constant)))
+        value: (initializer
+          (array_initializer
+            (initializer
+              (float_constant))
+            (initializer
+              (float_constant)))))
+      variable: (init_declarator
+        name: (identifier)
+        value: (initializer
+          (float_constant))))))
+
+================================================================================
+Declaration: PRECISION precision_qualifier type_specifier
+================================================================================
+
+precision highp float;
+precision mediump float;
+precision lowp Point2D;
+precision highp struct Named {
+    float x, y, z;
+};
+precision highp struct {
+    uint srid;
+};
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (basic_type)))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (basic_type)))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (identifier)))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (struct_specifier
+        name: (identifier)
+        (struct_declaration
+          (type_specifier
+            (basic_type))
+          (struct_declarator
+            (identifier))
+          (struct_declarator
+            (identifier))
+          (struct_declarator
+            (identifier))))))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (struct_specifier
+        (struct_declaration
+          (type_specifier
+            (basic_type))
+          (struct_declarator
+            (identifier)))))))
+
+================================================================================
+Declaration: .. struct_declaration_list ..
+================================================================================
+
+const Point {
+    float x;
+};
+
+struct Point {
+    float x;
+};
+
+in Point {
+    float x;
+} point;
+
+readonly Point {
+    float x;
+} points[10];
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (storage_qualifier))
+    (identifier)
+    (struct_declaration
+      (type_specifier
+        (basic_type))
+      (struct_declarator
+        (identifier))))
+  (declaration
+    (init_declarator_list
+      (fully_specified_type
+        (type_specifier
+          (struct_specifier
+            (identifier)
+            (struct_declaration
+              (type_specifier
+                (basic_type))
+              (struct_declarator
+                (identifier))))))))
+  (declaration
+    (type_qualifier
+      (storage_qualifier))
+    (identifier)
+    (struct_declaration
+      (type_specifier
+        (basic_type))
+      (struct_declarator
+        (identifier)))
+    (identifier))
+  (declaration
+    (type_qualifier
+      (storage_qualifier))
+    (identifier)
+    (struct_declaration
+      (type_specifier
+        (basic_type))
+      (struct_declarator
+        (identifier)))
+    (identifier)
+    (array_specifier
+      (integer_constant
+        (decimal_constant)))))
+
+================================================================================
+Declaration: type_qualifier ..
+================================================================================
+
+const;
+const constant;
+const c1, c2, c3;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (init_declarator_list
+      (fully_specified_type
+        (type_qualifier
+          (storage_qualifier))
+        (type_specifier
+          (identifier)))))
+  (declaration
+    (type_qualifier
+      (storage_qualifier))
+    (identifier)
+    (identifier)
+    (identifier)))

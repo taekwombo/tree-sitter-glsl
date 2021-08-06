@@ -1,0 +1,5 @@
+/.git/
+/node_modules/
+/build/
+tree-sitter-glsl.wasm
+package-lock.json

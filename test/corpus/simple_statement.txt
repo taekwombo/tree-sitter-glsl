@@ -1,0 +1,174 @@
+================================================================================
+Simple Statement - declaration
+================================================================================
+
+void fn () {
+    float test;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (declaration_statement
+        (declaration
+          (init_declarator_list
+            type: (fully_specified_type
+              (type_specifier
+                (basic_type)))
+            variable: (init_declarator
+              name: (identifier))))))))
+
+================================================================================
+Simple Statement - expression
+================================================================================
+
+void fn () {
+    100;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (integer_constant
+          (decimal_constant))))))
+
+================================================================================
+Simple Statement - selection
+================================================================================
+
+void fn () {
+    if (1 == index) {}
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (selection_statement
+        (equality_expression
+          (integer_constant
+            (decimal_constant))
+          (identifier))
+        (selection_rest_statement
+          (compound_statement))))))
+
+================================================================================
+Simple Statement - switch
+================================================================================
+
+void fn () {
+    switch(GL_VER) {}
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (switch_statement
+        (identifier)))))
+
+================================================================================
+Simple Statement - case label
+================================================================================
+
+void fn () {
+    case 100:
+    default:
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (case_label
+        (integer_constant
+          (decimal_constant)))
+      (case_label))))
+
+================================================================================
+Simple Statement - iteration
+================================================================================
+
+void fn () {
+    while (1) {}
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (iteration_statement
+        (condition
+          (integer_constant
+            (decimal_constant)))
+        (statement_no_new_scope
+          (compound_statement_no_new_scope))))))
+
+================================================================================
+Simple Statement - jump
+================================================================================
+
+void fn () {
+    continue;
+    break;
+    return;
+    return 10;
+    discard;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (jump_statement)
+      (jump_statement)
+      (jump_statement)
+      (jump_statement
+        (integer_constant
+          (decimal_constant)))
+      (jump_statement))))

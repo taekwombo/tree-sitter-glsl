@@ -1,0 +1,65 @@
+================================================================================
+Function Definition
+================================================================================
+
+void func () {}
+void func (void) {}
+void func (float x, float y) {}
+const float func (float x, float y) {
+    return x;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope))
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier)
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))))
+    (compound_statement_no_new_scope))
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier)
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))
+        name: (identifier))
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))
+        name: (identifier)))
+    (compound_statement_no_new_scope))
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_qualifier
+          (storage_qualifier))
+        (type_specifier
+          (basic_type)))
+      name: (identifier)
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))
+        name: (identifier))
+      parameter: (parameter_declaration
+        type: (type_specifier
+          (basic_type))
+        name: (identifier)))
+    (compound_statement_no_new_scope
+      (jump_statement
+        (identifier)))))

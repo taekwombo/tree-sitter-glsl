@@ -1,0 +1,51 @@
+================================================================================
+Type Specifier
+================================================================================
+
+precision highp boolean;
+precision highp int[1];
+precision highp Point2D;
+precision highp struct {
+    float x;
+};
+precision highp struct Point1D {
+    float x;
+};
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (identifier)))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (basic_type)
+      (array_specifier
+        (integer_constant
+          (decimal_constant)))))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (identifier)))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (struct_specifier
+        (struct_declaration
+          (type_specifier
+            (basic_type))
+          (struct_declarator
+            (identifier))))))
+  (declaration
+    (precision_qualifier)
+    (type_specifier
+      (struct_specifier
+        (identifier)
+        (struct_declaration
+          (type_specifier
+            (basic_type))
+          (struct_declarator
+            (identifier)))))))

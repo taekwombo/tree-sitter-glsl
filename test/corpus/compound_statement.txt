@@ -1,0 +1,26 @@
+================================================================================
+Compound Statement
+================================================================================
+
+void fn () {
+    { }
+    {
+        1;
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (compound_statement)
+      (compound_statement
+        (expression_statement
+          (integer_constant
+            (decimal_constant)))))))

@@ -1,0 +1,144 @@
+================================================================================
+Iteration Statement - while
+================================================================================
+
+void fn () {
+    while (true) {}
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      (identifier))
+    (compound_statement_no_new_scope
+      (iteration_statement
+        (condition
+          (bool_constant))
+        (statement_no_new_scope
+          (compound_statement_no_new_scope))))))
+
+================================================================================
+Iteration Statement - do while
+================================================================================
+
+void fn () {
+    do {} while (true);
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      (identifier))
+    (compound_statement_no_new_scope
+      (iteration_statement
+        (compound_statement)
+        (bool_constant)))))
+
+================================================================================
+Iteration Statement - for
+================================================================================
+
+void fn () {
+    for (1;;) {}
+    for (i;;) {}
+    for (int i = 0;;) {}
+    for (int i = 0; i; i++) {}
+    for (int i = 0; i; effect()) {}
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      (identifier))
+    (compound_statement_no_new_scope
+      (iteration_statement
+        (for_init_statement
+          (expression_statement
+            (integer_constant
+              (decimal_constant))))
+        (for_rest_statement)
+        (statement_no_new_scope
+          (compound_statement_no_new_scope)))
+      (iteration_statement
+        (for_init_statement
+          (declaration_statement
+            (declaration
+              (init_declarator_list
+                (fully_specified_type
+                  (type_specifier
+                    (identifier)))))))
+        (for_rest_statement)
+        (statement_no_new_scope
+          (compound_statement_no_new_scope)))
+      (iteration_statement
+        (for_init_statement
+          (declaration_statement
+            (declaration
+              (init_declarator_list
+                (fully_specified_type
+                  (type_specifier
+                    (basic_type)))
+                (init_declarator
+                  (identifier)
+                  (initializer
+                    (integer_constant
+                      (octal_constant))))))))
+        (for_rest_statement)
+        (statement_no_new_scope
+          (compound_statement_no_new_scope)))
+      (iteration_statement
+        (for_init_statement
+          (declaration_statement
+            (declaration
+              (init_declarator_list
+                (fully_specified_type
+                  (type_specifier
+                    (basic_type)))
+                (init_declarator
+                  (identifier)
+                  (initializer
+                    (integer_constant
+                      (octal_constant))))))))
+        (for_rest_statement
+          (condition
+            (identifier))
+          (postfix_expression
+            (identifier)))
+        (statement_no_new_scope
+          (compound_statement_no_new_scope)))
+      (iteration_statement
+        (for_init_statement
+          (declaration_statement
+            (declaration
+              (init_declarator_list
+                (fully_specified_type
+                  (type_specifier
+                    (basic_type)))
+                (init_declarator
+                  (identifier)
+                  (initializer
+                    (integer_constant
+                      (octal_constant))))))))
+        (for_rest_statement
+          (condition
+            (identifier))
+          (function_call_expression
+            (function_call
+              (identifier))))
+        (statement_no_new_scope
+          (compound_statement_no_new_scope))))))

@@ -1,0 +1,185 @@
+================================================================================
+Type Qualifier - storage
+================================================================================
+
+varying;
+const;
+in;
+out;
+inout;
+centroid;
+patch;
+sample;
+uniform;
+buffer;
+shared;
+coherent;
+volatile;
+restrict;
+readonly;
+writeonly;
+subroutine;
+subroutine( subTypeName0, subTypeName1 );
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier)))
+  (declaration
+    (type_qualifier
+      (storage_qualifier
+        (identifier)
+        (identifier)))))
+
+================================================================================
+Type Qualifier - layout
+================================================================================
+
+layout(shared);
+layout(packed);
+layout(test);
+layout(offset = 0);
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (layout_qualifier
+        (layout_qualifier_id
+          (identifier)))))
+  (declaration
+    (type_qualifier
+      (layout_qualifier
+        (layout_qualifier_id
+          (identifier)))))
+  (declaration
+    (type_qualifier
+      (layout_qualifier
+        (layout_qualifier_id
+          (identifier)))))
+  (declaration
+    (type_qualifier
+      (layout_qualifier
+        (layout_qualifier_id
+          (identifier)
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Type Qualifier - precision
+================================================================================
+
+highp;
+mediump;
+lowp;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (precision_qualifier)))
+  (declaration
+    (type_qualifier
+      (precision_qualifier)))
+  (declaration
+    (type_qualifier
+      (precision_qualifier))))
+
+================================================================================
+Type Qualifier - interpolation
+================================================================================
+
+smooth;
+flat;
+noperspective;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (interpolation_qualifier)))
+  (declaration
+    (type_qualifier
+      (interpolation_qualifier)))
+  (declaration
+    (type_qualifier
+      (interpolation_qualifier))))
+
+================================================================================
+Type Qualifier - invariant
+================================================================================
+
+invariant;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (invariant_qualifier))))
+
+================================================================================
+Type Qualifier - precise
+================================================================================
+
+precise;
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (declaration
+    (type_qualifier
+      (precise_qualifier))))

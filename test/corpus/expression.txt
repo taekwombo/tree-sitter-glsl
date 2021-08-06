@@ -1,0 +1,703 @@
+================================================================================
+Expression - primary
+================================================================================
+
+void fn () {
+    (identifier);
+    100;
+    100u;
+    0.0;
+    true;
+    10.0LF;
+    (0);
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (parenthesised_expression
+          (identifier)))
+      (expression_statement
+        (integer_constant
+          (decimal_constant)))
+      (expression_statement
+        (integer_constant
+          (decimal_constant)))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (bool_constant))
+      (expression_statement
+        (float_constant))
+      (expression_statement
+        (parenthesised_expression
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Expression - function call
+================================================================================
+
+void fn () {
+    float();
+    float(1);
+    vec2(1, 2, 3);
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (function_call_expression
+          (function_call
+            name: (type_specifier
+              (basic_type)))))
+      (expression_statement
+        (function_call_expression
+          (function_call
+            name: (type_specifier
+              (basic_type))
+            parameter: (integer_constant
+              (decimal_constant)))))
+      (expression_statement
+        (function_call_expression
+          (function_call
+            name: (type_specifier
+              (basic_type))
+            parameter: (integer_constant
+              (decimal_constant))
+            parameter: (integer_constant
+              (decimal_constant))
+            parameter: (integer_constant
+              (decimal_constant))))))))
+
+================================================================================
+Expression - array subscript
+================================================================================
+
+void fn () {
+    (arr[1]);
+    (arr[index]);
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (parenthesised_expression
+          (array_subscript_expression
+            (identifier)
+            (integer_constant
+              (decimal_constant)))))
+      (expression_statement
+        (parenthesised_expression
+          (array_subscript_expression
+            (identifier)
+            (identifier)))))))
+
+================================================================================
+Expression - field select
+================================================================================
+
+void fn () {
+    point.x;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (field_select_expression
+          (identifier)
+          (identifier))))))
+
+================================================================================
+Expression - postfix
+================================================================================
+
+void fn () {
+    100++;
+    100--;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (postfix_expression
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (postfix_expression
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - prefix
+================================================================================
+
+void fn () {
+    ++100;
+    --100;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (prefix_expression
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (prefix_expression
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - unary
+================================================================================
+
+void fn () {
+    +1;
+    -1;
+    !false;
+    ~0;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (unary_expression
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (unary_expression
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (unary_expression
+          (bool_constant)))
+      (expression_statement
+        (unary_expression
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Expression - multiplicative
+================================================================================
+
+void fn () {
+    1 * 1;
+    1 / 1;
+    1 % 1;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (multiplicative_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (multiplicative_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (multiplicative_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - additive
+================================================================================
+
+void fn () {
+    0 + 0;
+    0 - 0;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (additive_expression
+          (integer_constant
+            (octal_constant))
+          (integer_constant
+            (octal_constant))))
+      (expression_statement
+        (additive_expression
+          (integer_constant
+            (octal_constant))
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Expression - shift
+================================================================================
+
+void fn () {
+    100 >> 2;
+    100 << bits;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (shift_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (shift_expression
+          (integer_constant
+            (decimal_constant))
+          (identifier))))))
+
+================================================================================
+Expression - relational
+================================================================================
+
+void fn () {
+    1 < 1;
+    1 > 1;
+    1 <= 1;
+    1 >= 1;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (relational_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (relational_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (relational_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (relational_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - equality
+================================================================================
+
+void fn () {
+    0 == 0;
+    0 != 0;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (equality_expression
+          (integer_constant
+            (octal_constant))
+          (integer_constant
+            (octal_constant))))
+      (expression_statement
+        (equality_expression
+          (integer_constant
+            (octal_constant))
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Expression - bitwise and
+================================================================================
+
+void fn () {
+    1 & 1;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (and_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - bitwise xor
+================================================================================
+
+void fn () {
+    1 ^ 1;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (exclusive_or_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - bitwise or
+================================================================================
+
+void fn () {
+    0 | 0;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (inclusive_or_expression
+          (integer_constant
+            (octal_constant))
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Expression - logical and
+================================================================================
+
+void fn () {
+    0 && 2;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (logical_and_expression
+          (integer_constant
+            (octal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - logical xor
+================================================================================
+
+void fn () {
+    50 ^^ 50;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (logical_xor_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - logical or
+================================================================================
+
+void fn () {
+    2 || 2;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (logical_or_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - conditional expression
+================================================================================
+
+void fn () {
+    true ? 1 : 0;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (conditional_expression
+          (bool_constant)
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (octal_constant)))))))
+
+================================================================================
+Expression - assignment
+================================================================================
+
+void fn () {
+    test = 1;
+    test *= 1;
+    test /= 1;
+    test %= 1;
+    test += 1;
+    tset -= 1;
+    test <<= 1;
+    test >>= 1;
+    test &= 1;
+    test ^= 1;
+    test |= 1;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant))))
+      (expression_statement
+        (assignment_expression
+          (identifier)
+          (integer_constant
+            (decimal_constant)))))))
+
+================================================================================
+Expression - sequence
+================================================================================
+
+void fn () {
+    1, 2, 3, 4;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      type: (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      name: (identifier))
+    (compound_statement_no_new_scope
+      (expression_statement
+        (sequence_expression
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant))
+          (integer_constant
+            (decimal_constant)))))))
