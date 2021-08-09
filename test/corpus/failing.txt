@@ -1,0 +1,55 @@
+================================================================================
+Failing - non-keyword variable name (terminal defined in grammar)
+================================================================================
+
+void main() {
+    int sample;
+    sample = 1;
+}
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (function_definition
+    (function_prototype
+      (fully_specified_type
+        (type_specifier
+          (basic_type)))
+      (identifier))
+    (compound_statement_no_new_scope
+      (declaration_statement
+        (declaration
+          (init_declarator_list
+            (fully_specified_type
+              (type_specifier
+                (basic_type)))
+            (init_declarator
+              (identifier)))))
+      (declaration_statement
+        (declaration
+          (type_qualifier
+            (storage_qualifier))
+          (ERROR
+            (decimal_constant)))))))
+
+================================================================================
+Failing - invalid grammar in preprocessor block
+================================================================================
+
+#ifdef VERTEX
+foo bar baz
+#endif
+
+--------------------------------------------------------------------------------
+
+(translation_unit
+  (preprocessor_ifdef
+    (identifier))
+  (ERROR
+    (init_declarator_list
+      (fully_specified_type
+        (type_specifier
+          (identifier)))
+      (init_declarator
+        (identifier))))
+  (preprocessor_endif))
