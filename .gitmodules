@@ -1,3 +1,6 @@
 [submodule "examples/glsl-optimizer"]
 	path = examples/glsl-optimizer
 	url = git@github.com:aras-p/glsl-optimizer.git
+[submodule "examples/mcnopper_opengl"]
+	path = examples/mcnopper_opengl
+	url = git@github.com:McNopper/OpenGL.git

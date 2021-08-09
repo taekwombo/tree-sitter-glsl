@@ -3,9 +3,9 @@
 code=0
 failing_files=""
 
-echo "Testing glsl-optimizer"
+echo "Testing mcnopper_opengl"
 
-for file in ./examples/glsl-optimizer/tests/**/*-in{.txt,ES.txt,ES3.txt}
+for file in ./examples/mcnopper_opengl/**/shader/*.glsl
 do
     ./node_modules/.bin/tree-sitter parse $file > /dev/null
 
@@ -14,7 +14,7 @@ do
     fi
 done
 
-expected_failing_files="$(cat ./scripts/test_glsl_optimizer_failing.txt)"
+expected_failing_files="$(cat ./scripts/test_mcnopper_opengl_failing.txt)"
 
 if test "$expected_failing_files" != "$failing_files"; then
     printf "Expected failing files differ from the test output.\n"
